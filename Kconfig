@@ -218,3 +218,10 @@ source "platforms/common/Kconfig"
 endmenu
 
 source "src/lib/*/Kconfig"
+
+menu "Examples"
+    source "src/examples/fake_gps/Kconfig"
+    source "src/examples/hello/Kconfig"
+    # Add your line here:
+    source "src/examples/px4_data_subscriber/Kconfig"
+endmenu

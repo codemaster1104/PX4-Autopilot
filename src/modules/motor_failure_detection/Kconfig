@@ -1,0 +1,12 @@
+menuconfig MODULES_MOTOR_FAILURE_DETECTION
+    bool "motor_failure_detection"
+    default n
+    ---help---
+        Enable support for motor_failure_detection
+
+menuconfig USER_MOTOR_FAILURE_DETECTION
+    bool "motor_failure_detection running as userspace module"
+    default n
+    depends on BOARD_PROTECTED && MODULES_MOTOR_FAILURE_DETECTION
+    ---help---
+        Put motor_failure_detection in userspace memory

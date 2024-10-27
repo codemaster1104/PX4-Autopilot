@@ -1,0 +1,12 @@
+menuconfig MODULES_WAYPOINT_TEST
+    bool "waypoint_test"
+    default n
+    ---help---
+        Enable support for waypoint_test
+
+menuconfig USER_WAYPOINT_TEST
+    bool "waypoint_test running as userspace module"
+    default n
+    depends on BOARD_PROTECTED && MODULES_WAYPOINT_TEST
+    ---help---
+        Put waypoint_test in userspace memory
